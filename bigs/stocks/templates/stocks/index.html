@@ -4,6 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>BIGS</title>
+	<link rel="stylesheet" type="text/css" href="/static/stocks/style.css" />
 </head>
 
 <body>
@@ -48,19 +49,43 @@
 					<div>
 						<h5>종목</h5>
 						<li>종목명: {{stock.name}}</li>
-						<li>수집정보: {{stock.information}}</li>
-						<li>BIGS 종합점수: {{stock.total_score}}</li>
+						<li>수집정보: {{stock.theme}}</li>
+						<li>BIGS 종합점수: {{stock.bigs_score}}</li>
 					</div>
 					{% endfor %}
 				</div>
 				<div class="card card2">
 					<span>스윙</span>
+					{% for stock in stocks %}
+					<div>
+						<h5>종목</h5>
+						<li>종목명: {{stock.name}}</li>
+						<li>수집정보: {{stock.theme}}</li>
+						<li>BIGS 종합점수: {{stock.bigs_score}}</li>
+					</div>
+					{% endfor %}
 				</div>
 				<div class="card card3">
 					<span>중장기</span>
+					{% for stock in stocks %}
+					<div>
+						<h5>종목</h5>
+						<li>종목명: {{stock.name}}</li>
+						<li>수집정보: {{stock.theme}}</li>
+						<li>BIGS 종합점수: {{stock.bigs_score}}</li>
+					</div>
+					{% endfor %}
 				</div>
 				<div class="card card4">
 					<span>테마주</span>
+					{% for stock in stocks %}
+					<div>
+						<h5>종목</h5>
+						<li>종목명: {{stock.name}}</li>
+						<li>수집정보: {{stock.theme}}</li>
+						<li>BIGS 종합점수: {{stock.bigs_score}}</li>
+					</div>
+					{% endfor %}
 				</div>
 			</div>
 			<div class="box box3">
@@ -81,7 +106,7 @@
 		</main>
 
 		<footer class="footer">
-			
+			푸터
 		</footer>
 
 	</div>

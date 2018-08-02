@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+/* 구분을 위한 컬러설정 */
+/*
+.wrapper {
+	background-color: #e1ffc5;
+}
+
+.header {
+	background-color: #92fdf5;
+}
+
+.main-content {
+	background-color: #51d8ce;
+}
+
+.footer {
+	background-color: #34b8ae;
+}
+
+.box1 {
+	background-color: #fbc2ff;
+}
+.box2 {
+	background-color: #f28ff9;
+}
+.box3 {
+	background-color: #ef59f9;
+}
+
+.card1 {
+	background-color: #fffdd3 ;
+}
+.card2 {
+	background-color: #fffa8c ;
+}
+.card3 {
+	background-color: #f0e954 ;
+}
+.card4 {
+	background-color: #b8b21a ;
+}
+*/
+
+/* 레이아웃 */
+
+.header,
+.main-content,
+.footer {
+	width: 1100px;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+
+.main-content {
+	min-height: 400px;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+}
+
+.box1 {
+	width: 230px;
+}
+
+.box2 {
+	width: 500px;
+	font-size: 12px;
+}
+
+.box3 {
+	width: 200px;
+}
+
+.box {
+	display: flex;
+	justify-content: space-between;
+}
+
+.card {
+	width: 170px;
+}
+
+.card div {
+	background-color: #d7dbe1;
+}

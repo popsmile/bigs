@@ -17,8 +17,10 @@ class Member(models.Model):
 		return self.name
 
 class StockCard(models.Model):
+	category = models.CharField(max_length=10)
 	name = models.CharField(max_length=30)
-	information = models.TextField()
-	total_score = models.DecimalField(max_digits=3, decimal_places=1)
+	code = models.CharField(max_length=10)
+	theme = models.TextField()
+	bigs_score = models.DecimalField(max_digits=3, decimal_places=1)
 	def __str__(self):
 		return self.name
