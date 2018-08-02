@@ -23,4 +23,4 @@ class StockCard(models.Model):
 	theme = models.TextField()
 	bigs_score = models.DecimalField(max_digits=3, decimal_places=1)
 	def __str__(self):
-		return self.name
+		return self.category + " - " + self.name
