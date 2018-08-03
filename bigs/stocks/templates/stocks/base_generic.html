@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title>BIGS</title>
+	<link rel="stylesheet" type="text/css" href="/static/stocks/style.css" />
+</head>
+
+<body>
+	<div class="wrapper">
+
+		{% block header %} 
+			<header class="header">
+				<a href="{% url 'index' %}">
+					<h1>Bigs</h1>
+					<h3>세상의 모든 주식정보</h3>
+				</a>
+				<h4>로그인</h4>
+			</header>
+		{% endblock %}
+
+		<main class="main-content">
+
+			{% block sidebar %} 
+				<div class="box box1">
+					<nav class="navigation">
+						<ul class="main-menu">
+							<li>
+								<span>빅데이터 종목선정</span>
+								<ul class="bigdata-stock-pick">
+									<li><a href="#">단타</a></li>
+									<li><a href="#">스윙</a></li>
+									<li><a href="#">중장기</a></li>
+								</ul>
+							</li>
+							<li>
+								<span>빅데이터 종목정보</span>
+								<ul class="bigdata-stock-information">
+									<li><a href="#">종목 개별정보</a></li>
+									<li><a href="#">재무 정보</a></li>
+									<li><a href="#">테마 정보</a></li>
+								</ul>
+							</li>
+							<li>
+								<span>빅데이터 종목검색기</span>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			{% endblock %}
+			
+			{% block content %} 
+			{% endblock %}
+
+		</main>
+
+
+		<footer class="footer">
+			푸터
+		</footer>
+		
+	</div>
+</body>
+
+</html>

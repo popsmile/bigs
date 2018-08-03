@@ -1,115 +1,65 @@
-<!DOCTYPE html>
-<html lang="ko">
+{% extends "./base_generic.html" %}
 
-<head>
-	<meta charset="UTF-8">
-	<title>BIGS</title>
-	<link rel="stylesheet" type="text/css" href="/static/stocks/style.css" />
-</head>
-
-<body>
-	<div class="wrapper">
-
-		<header class="header">
-			<h1>Bigs</h1>
-			<h3>세상의 모든 주식정보</h3>
-			<h4>로그인</h4>
-		</header>
-
-		<main class="main-content">
-			<div class="box box1">
-				<nav class="navigation">
-					<ul class="main-menu">
-						<li>
-							<span>빅데이터 종목선정</span>
-							<ul class="bigdata-stock-pick">
-								<li><a href="#">단타</a></li>
-								<li><a href="#">스윙</a></li>
-								<li><a href="#">중장기</a></li>
-							</ul>
-						</li>
-						<li>
-							<span>빅데이터 종목정보</span>
-							<ul class="bigdata-stock-information">
-								<li><a href="#">종목 개별정보</a></li>
-								<li><a href="#">재무 정보</a></li>
-								<li><a href="#">테마 정보</a></li>
-							</ul>
-						</li>
-						<li>
-							<span>빅데이터 종목검색기</span>
-						</li>
-					</ul>
-				</nav>
+{% block content %}
+	<div class="box box2">
+		<div class="card card1">
+			<span>단기 후보주</span>
+			{% for stock in stocks %}
+			<div>
+				<h5>종목</h5>
+				<li>종목명: {{stock.name}}</li>
+				<li>수집정보: {{stock.theme}}</li>
+				<li>BIGS 종합점수: {{stock.bigs_score}}</li>
 			</div>
-			<div class="box box2">
-				<div class="card card1">
-					<span>단기 후보주</span>
-					{% for stock in stocks %}
-					<div>
-						<h5>종목</h5>
-						<li>종목명: {{stock.name}}</li>
-						<li>수집정보: {{stock.theme}}</li>
-						<li>BIGS 종합점수: {{stock.bigs_score}}</li>
-					</div>
-					{% endfor %}
-				</div>
-				<div class="card card2">
-					<span>스윙</span>
-					{% for stock in stocks %}
-					<div>
-						<h5>종목</h5>
-						<li>종목명: {{stock.name}}</li>
-						<li>수집정보: {{stock.theme}}</li>
-						<li>BIGS 종합점수: {{stock.bigs_score}}</li>
-					</div>
-					{% endfor %}
-				</div>
-				<div class="card card3">
-					<span>중장기</span>
-					{% for stock in stocks %}
-					<div>
-						<h5>종목</h5>
-						<li>종목명: {{stock.name}}</li>
-						<li>수집정보: {{stock.theme}}</li>
-						<li>BIGS 종합점수: {{stock.bigs_score}}</li>
-					</div>
-					{% endfor %}
-				</div>
-				<div class="card card4">
-					<span>테마주</span>
-					{% for stock in stocks %}
-					<div>
-						<h5>종목</h5>
-						<li>종목명: {{stock.name}}</li>
-						<li>수집정보: {{stock.theme}}</li>
-						<li>BIGS 종합점수: {{stock.bigs_score}}</li>
-					</div>
-					{% endfor %}
-				</div>
+			{% endfor %}
+		</div>
+		<div class="card card2">
+			<span>스윙</span>
+			{% for stock in stocks %}
+			<div>
+				<h5>종목</h5>
+				<li>종목명: {{stock.name}}</li>
+				<li>수집정보: {{stock.theme}}</li>
+				<li>BIGS 종합점수: {{stock.bigs_score}}</li>
 			</div>
-			<div class="box box3">
-				<span>실시간 빅데이터종목</span>
-				<ul class="realtime-rank">
-					<li><a href="#">제일제강</a></li>
-					<li><a href="#">삼화전기</a></li>
-					<li><a href="#">삼성전자</a></li>
-					<li><a href="#">네이버</a></li>
-					<li><a href="#">LG전자</a></li>
-					<li><a href="#">국영지엔앰</a></li>
-					<li><a href="#">SBI인베스트먼트</a></li>
-					<li><a href="#">SV인베스트</a></li>
-					<li><a href="#">와이지엔터테인먼트</a></li>
-					<li><a href="#">JYP</a></li>
-				</ul>
+			{% endfor %}
+		</div>
+		<div class="card card3">
+			<span>중장기</span>
+			{% for stock in stocks %}
+			<div>
+				<h5>종목</h5>
+				<li>종목명: {{stock.name}}</li>
+				<li>수집정보: {{stock.theme}}</li>
+				<li>BIGS 종합점수: {{stock.bigs_score}}</li>
 			</div>
-		</main>
-
-		<footer class="footer">
-			푸터
-		</footer>
-
+			{% endfor %}
+		</div>
+		<div class="card card4">
+			<span>테마주</span>
+			{% for stock in stocks %}
+			<div>
+				<h5>종목</h5>
+				<li>종목명: {{stock.name}}</li>
+				<li>수집정보: {{stock.theme}}</li>
+				<li>BIGS 종합점수: {{stock.bigs_score}}</li>
+			</div>
+			{% endfor %}
+		</div>
 	</div>
-</body>
-
-</html>
+	<div class="box box3">
+		<span>실시간 빅데이터종목</span>
+		<ul class="realtime-rank">
+			<li><a href="#">제일제강</a></li>
+			<li><a href="#">삼화전기</a></li>
+			<li><a href="#">삼성전자</a></li>
+			<li><a href="#">네이버</a></li>
+			<li><a href="#">LG전자</a></li>
+			<li><a href="#">국영지엔앰</a></li>
+			<li><a href="#">SBI인베스트먼트</a></li>
+			<li><a href="#">SV인베스트</a></li>
+			<li><a href="#">와이지엔터테인먼트</a></li>
+			<li><a href="#">JYP</a></li>
+		</ul>
+	</div>
+{% endblock %}
