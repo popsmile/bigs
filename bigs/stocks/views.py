@@ -23,3 +23,8 @@ def signup(request):
 	else:
 		form = SignUpForm()
 	return render(request, 'registration/signup.html', {'form':form})
+
+def stockpage(request, stockname):
+	stock = StockCard.objects.get(name=stockname)
+	context = {'stock':stock}
+	return render(request, 'stocks/stockpage.html', context)

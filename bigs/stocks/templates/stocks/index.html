@@ -8,9 +8,9 @@
 			<div>
 				<h5>종목</h5>
 				{% if user.is_authenticated %}
-					<li>종목명: {{stock.name}}</li>
+					<li>종목명: <a href="stocks/{{stock.name}}">{{stock.name}}</a></li>
 				{% else %}
-					<li>종목명: ******</li>
+					<li>종목명: <a href="{% url 'login' %}">******</a></li>
 				{% endif %}
 				<li>수집정보: {{stock.theme}}</li>
 				<li>BIGS 종합점수: {{stock.bigs_score}}</li>
@@ -23,9 +23,9 @@
 			<div>
 				<h5>종목</h5>
 				{% if user.is_authenticated %}
-					<li>종목명: {{stock.name}}</li>
+					<li>종목명: <a href="stocks/{{stock.name}}">{{stock.name}}</a></li>
 				{% else %}
-					<li>종목명: ******</li>
+					<li>종목명: <a href="{% url 'login' %}">******</a></li>
 				{% endif %}
 				<li>수집정보: {{stock.theme}}</li>
 				<li>BIGS 종합점수: {{stock.bigs_score}}</li>
@@ -38,9 +38,9 @@
 			<div>
 				<h5>종목</h5>
 				{% if user.is_authenticated %}
-					<li>종목명: {{stock.name}}</li>
+					<li>종목명: <a href="stocks/{{stock.name}}">{{stock.name}}</a></li>
 				{% else %}
-					<li>종목명: ******</li>
+					<li>종목명: <a href="{% url 'login' %}">******</a></li>
 				{% endif %}
 				<li>수집정보: {{stock.theme}}</li>
 				<li>BIGS 종합점수: {{stock.bigs_score}}</li>
@@ -53,9 +53,9 @@
 			<div>
 				<h5>종목</h5>
 				{% if user.is_authenticated %}
-					<li>종목명: {{stock.name}}</li>
+					<li>종목명: <a href="stocks/{{stock.name}}">{{stock.name}}</a></li>
 				{% else %}
-					<li>종목명: ******</li>
+					<li>종목명: <a href="{% url 'login' %}">******</a></li>
 				{% endif %}
 				<li>수집정보: {{stock.theme}}</li>
 				<li>BIGS 종합점수: {{stock.bigs_score}}</li>
